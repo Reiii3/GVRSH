@@ -24,7 +24,6 @@ echo "    Developer : Reii"
 echo "    version   : ${version} | ${versionCode}"
 echo "    Update    : none "
 echo
-
-echo"   Running Game : ${runPackage}"
+echo "    Running Game : ${runPackage}"
 echo
 echo ""
