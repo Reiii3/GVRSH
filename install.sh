@@ -12,10 +12,6 @@ if [ -n "$1" ] && [ "$1" == "-p" ];then
     shift 2
 fi
 
-if [ -z $runPackage ]; then 
-    echo "package not detected"
-    exit 1
-fi
 
 echo "=======================================" 
 echo "     Welcome To Modules Plugin GVR "
@@ -24,6 +20,12 @@ echo "    Developer : Reii"
 echo "    version   : ${version} | ${versionCode}"
 echo "    Update    : none "
 echo
+
+if [ -z $runPackage ]; then 
+    echo "package not detected"
+    exit 1
+fi
+
 echo "    Running Game : ${runPackage}"
 echo
 echo ""
