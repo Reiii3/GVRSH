@@ -16,9 +16,13 @@ fi
 echo "=======================================" 
 echo "     Welcome To Modules Plugin GVR "
 echo "=======================================" 
+sleep 0.5
 echo "    Developer : Reii"
+sleep 0.5
 echo "    version   : ${version} | ${versionCode}"
+sleep 0.5
 echo "    Update    : none "
+sleep 0.5
 echo
 
 if [ -z $runPackage ]; then 
@@ -27,8 +31,11 @@ if [ -z $runPackage ]; then
 fi
 
 echo "    Running Game : ${runPackage}"
+sleep 1
 echo
 echo "===================="
 echo "    Open to GVR"
 echo "===================="
+sleep 0.5
 flaunch $runPackage1
+am-kill all
