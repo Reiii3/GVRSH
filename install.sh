@@ -12,7 +12,7 @@ if [ -n "$1" ] && [ "$1" == "-p" ];then
     shift 2
 fi
 
-apply (a) {
+apply () {
   echo "game: $runPackage"
 }
 
