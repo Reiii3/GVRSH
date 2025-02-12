@@ -1,4 +1,4 @@
-if [ $AXERON = false]; then 
+if [ $AXERON = false ]; then 
     echo "Module ini hanya untuk Laxeron "
 fi
 
