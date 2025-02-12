@@ -28,4 +28,7 @@ fi
 
 echo "    Running Game : ${runPackage}"
 echo
-echo ""
+echo "===================="
+echo "    Open to GVR"
+echo "===================="
+flaunch $runPackage1
