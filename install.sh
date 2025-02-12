@@ -12,6 +12,9 @@ if [ -n "$1" ] && [ "$1" == "-p" ];then
     shift 2
 fi
 
+apply (a) {
+  echo "game: $runPackage"
+}
 
 echo "=======================================" 
 echo "     Welcome To Modules Plugin GVR "
@@ -32,6 +35,9 @@ fi
 
 echo "    Running Game : ${runPackage}"
 sleep 1
+
+apply($runPackage)
+
 echo
 echo "===================="
 echo "    Open to GVR"
