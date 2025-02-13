@@ -57,6 +57,7 @@ if [ ! -f "$log_file" ]; then
     echo "          ================================"
     echo "            [Instalation System Modules]"
     echo "          ================================"
+    echo
     apply
     sleep 1
     echo "" > "$log_file" # Membuat file sebagai penanda bahwa instalasi sudah dilakukan
