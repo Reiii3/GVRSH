@@ -75,9 +75,9 @@ fi
  echo "   ->[Aktivasi System compile]"
  sleep 1
  if [ -z $renderer ]; then
-   echo "   ->[Reder selection : none"
+   echo "   ->[Reder selection : none]"
  else
-   echo "   ->[Reder selection : ${renderer}"
+   echo "   ->[Reder selection : ${renderer}]"
  fi
 
 
