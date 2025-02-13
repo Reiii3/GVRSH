@@ -14,6 +14,11 @@ if [ -n "$1" ] && [ "$1" == "-p" ];then
     shift 2
 fi
 
+if [ -n "$1" ] && [ "$1" == "-v" ];then
+    renderer="$2"
+    shift 
+fi
+
 apply () {
  
 }
