@@ -42,7 +42,7 @@ fi
 echo "  [Running Game : ${runPackage}]"
 echo
 sleep 1
-
+echo "=======================================" 
 
 if [ ! -f "$log_file" ]; then
     echo "          ================================"
