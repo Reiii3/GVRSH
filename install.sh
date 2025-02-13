@@ -5,6 +5,8 @@ fi
 $AXFUN
 import axeron.prop
 runPackage1="com.rezone.gvortex"
+log_file="/data/local/tmp/install_selesai"
+
 
 if [ -n "$1" ] && [ "$1" == "-p" ];then
     axprop $path_axeronprop runPackage -s "$2"
@@ -37,9 +39,6 @@ echo "    Running Game : ${runPackage}"
 echo
 sleep 1
 
-
-
-log_file="/data/local/tmp/install_selesai"
 
 if [ ! -f "$log_file" ]; then
     echo "          ================================"
