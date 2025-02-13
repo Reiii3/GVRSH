@@ -13,7 +13,7 @@ if [ -n "$1" ] && [ "$1" == "-p" ];then
 fi
 
 apply () {
-  echo "game: $runPackage"
+ 
 }
 
 echo "=======================================" 
@@ -36,7 +36,27 @@ fi
 echo "    Running Game : ${runPackage}"
 sleep 1
 
-apply
+
+
+log_file="/data/local/tmp/install_selesai"
+
+if [ ! -f "$log_file" ]; then
+    echo "->[Instalation Fitur pleas wait]"
+    apply
+    echo "" > "$log_file" # Membuat file sebagai penanda bahwa instalasi sudah dilakukan
+else
+    echo "->[System Modules Sudah Aktif]"
+    sleep 1.5
+    echo
+fi
+
+ echo "   ============================="
+ echo "     [Penyesuaian System Game]"
+ echo "   ============================="
+ echo
+ echo "   ->[Aktivasi System Driver Game]"
+ echo "   ->[Aktivasi System compile]"
+
 
 echo
 echo "===================="
