@@ -39,7 +39,7 @@ if [ -z $runPackage ]; then
     exit 1
 fi
 
-echo "[Running Game : ${runPackage}]"
+echo " [Running Game : ${runPackage}]"
 echo
 sleep 1
 echo "=======================================" 
