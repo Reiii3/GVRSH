@@ -41,7 +41,7 @@ sleep 1
 log_file="/data/local/tmp/install_selesai"
 
 if [ ! -f "$log_file" ]; then
-    echo "->[Instalation Fitur pleas wait]"
+    echo "->[Instalation Systemr]"
     apply
     echo "" > "$log_file" # Membuat file sebagai penanda bahwa instalasi sudah dilakukan
 else
