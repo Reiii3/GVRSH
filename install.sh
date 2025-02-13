@@ -37,7 +37,7 @@ echo "    version   : ${version} | ${versionCode}"
 sleep 0.5
 echo "    Update    : none "
 sleep 0.5
-if [ ! -f "$log_file" ]; then
+if [ -f "$log_file" ]; then
   echo "    Status    : [Active]"
 else
   echo "    Status    : [Non Active]"
