@@ -32,14 +32,14 @@ echo "    version   : ${version} | ${versionCode}"
 sleep 0.5
 echo "    Update    : none "
 sleep 0.5
-echo
+
 
 if [ -z $runPackage ]; then 
     echo "package not detected"
     exit 1
 fi
 
-echo "    [Running Game : ${runPackage}]"
+echo "  [Running Game : ${runPackage}]"
 echo
 sleep 1
 
