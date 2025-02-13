@@ -43,5 +43,3 @@ echo "===================="
 echo "    Open to GVR"
 echo "===================="
 sleep 0.5
-flaunch $runPackage1
-am-kill all
