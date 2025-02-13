@@ -37,7 +37,11 @@ echo "    version   : ${version} | ${versionCode}"
 sleep 0.5
 echo "    Update    : none "
 sleep 0.5
-
+if [ ! -f "$log_file" ]; then
+  echo "    Status    : [Active]"
+else
+  echo "    Status    : [Non Active]"
+fi
 
 if [ -z $runPackage ]; then 
     echo "package not detected"
@@ -56,7 +60,6 @@ if [ ! -f "$log_file" ]; then
     apply
     sleep 1
     echo "" > "$log_file" # Membuat file sebagai penanda bahwa instalasi sudah dilakukan
-    echo "                      [Active]"
 else
     echo "          ================================"
     echo "            [System Modules Sudah Aktif]"      
