@@ -36,7 +36,7 @@ fi
 echo "    Running Game : ${runPackage}"
 sleep 1
 
-apply($runPackage)
+apply
 
 echo
 echo "===================="
