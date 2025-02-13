@@ -41,11 +41,15 @@ sleep 1
 log_file="/data/local/tmp/install_selesai"
 
 if [ ! -f "$log_file" ]; then
-    echo "->[Instalation Systemr]"
+    echo "================================"
+    echo "  [Instalation System Modules]"
+    echo "================================"
     apply
     echo "" > "$log_file" # Membuat file sebagai penanda bahwa instalasi sudah dilakukan
 else
-    echo "->[System Modules Sudah Aktif]"
+    echo "================================"
+    echo "  [System Modules Sudah Aktif]"
+    echo "================================"
     sleep 1.5
     echo
 fi
