@@ -34,6 +34,7 @@ if [ -z $runPackage ]; then
 fi
 
 echo "    Running Game : ${runPackage}"
+echo
 sleep 1
 
 
@@ -41,15 +42,16 @@ sleep 1
 log_file="/data/local/tmp/install_selesai"
 
 if [ ! -f "$log_file" ]; then
-    echo "================================"
-    echo "  [Instalation System Modules]"
-    echo "================================"
+    echo "          ================================"
+    echo "            [Instalation System Modules]"
+    echo "          ================================"
     apply
+    sleep 1.5
     echo "" > "$log_file" # Membuat file sebagai penanda bahwa instalasi sudah dilakukan
 else
-    echo "================================"
-    echo "  [System Modules Sudah Aktif]"
-    echo "================================"
+    echo "          ================================"
+    echo "            [System Modules Sudah Aktif]"      
+    echo "          ================================"
     sleep 1.5
     echo
 fi
