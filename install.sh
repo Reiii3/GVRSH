@@ -38,16 +38,17 @@ if [ -z $runPackage ]; then
     echo "package not detected"
     exit 1
 fi
+sleep 1
+echo "======================================="
 
 echo " [Running Game : ${runPackage}]"
+sleep 0.5
 echo
-sleep 1
-echo "=======================================" 
-
 if [ ! -f "$log_file" ]; then
     echo "          ================================"
     echo "            [Instalation System Modules]"
     echo "          ================================"
+    sleep 0.5
     apply
     sleep 1.5
     echo "" > "$log_file" # Membuat file sebagai penanda bahwa instalasi sudah dilakukan
@@ -62,9 +63,12 @@ fi
  echo "   ============================="
  echo "     [Penyesuaian System Game]"
  echo "   ============================="
+ sleep 0.5
  echo
  echo "   ->[Aktivasi System Driver Game]"
+ sleep 1
  echo "   ->[Aktivasi System compile]"
+ sleep 1
 
 
 echo
