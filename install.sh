@@ -48,10 +48,10 @@ if [ ! -f "$log_file" ]; then
     echo "          ================================"
     echo "            [Instalation System Modules]"
     echo "          ================================"
-    sleep 0.5
     apply
-    sleep 1.5
+    sleep 1
     echo "" > "$log_file" # Membuat file sebagai penanda bahwa instalasi sudah dilakukan
+    echo "                      [Active]"
 else
     echo "          ================================"
     echo "            [System Modules Sudah Aktif]"      
