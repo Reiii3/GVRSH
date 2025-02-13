@@ -40,7 +40,7 @@ if [ -z $runPackage ]; then
 fi
 sleep 1
 echo "======================================="
-
+echo
 echo " [Running Game : ${runPackage}]"
 sleep 0.5
 echo
