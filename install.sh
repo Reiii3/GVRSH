@@ -93,6 +93,4 @@ echo "===================="
 echo "    Open to GVR"
 echo "===================="
 echo "| Enjoy This Game |"
-sleep 2
-flaunch $runPackage1
 sleep 0.5
