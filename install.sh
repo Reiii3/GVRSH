@@ -84,7 +84,9 @@ fi
  else
    echo "   ->[Reder selection : ${renderer}]"
  fi
-
+if [ "$runPackage1" = com.dts.frrefiremax ]; then
+   echo "   ->[Optimation FreeFire]"
+fi
 
 echo
 echo "===================="
