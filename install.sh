@@ -33,7 +33,7 @@ echo "======================================="
 sleep 0.5
 echo "    Developer : Reii"
 sleep 0.5
-echo "    version   : ${version} | ${versionCode}"
+echo "    Version   : ${version} | ${versionCode}"
 sleep 0.5
 echo "    Update    : none "
 sleep 0.5
@@ -81,11 +81,14 @@ fi
  sleep 1
  if [ -z $renderer ]; then
    echo "   ->[Reder selection : none]"
+   sleep 1
  else
    echo "   ->[Reder selection : ${renderer}]"
+   sleep 1
  fi
 if [ "${runPackage}" = "com.dts.freefiremax" ]; then
    echo "   ->[Optimation FreeFire]"
+   sleep 0.5
 fi
 
 echo
