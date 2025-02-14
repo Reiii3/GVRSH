@@ -89,8 +89,8 @@ if [ "$runPackage" = com.dts.frrefiremax ]; then
 fi
 
 echo
-echo "===================="
+echo "==================="
 echo "    Open to GVR"
-echo "===================="
+echo "==================="
 echo "| Enjoy This Game |"
 sleep 0.5
