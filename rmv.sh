@@ -25,3 +25,7 @@ sleep 1
 echo "======================================="
 echo
 echo " Rmoved Game : ${runPackage}"
+
+rm $log_file
+
+echo "Removed"
