@@ -24,7 +24,7 @@ fi
 sleep 1
 echo "======================================="
 echo
-echo " Rmoved Game : ${runPackage}"
+echo "Rmoved Game : ${runPackage}"
 
 rm $log_file
 
