@@ -1,5 +1,5 @@
-if [ $AXERON = fakse ]; then
-    echo "support From Laxeron"
+if [ $AXERON = false ]; then 
+  echo "detected Laxeron"
 fi
 
 $AXFUN
