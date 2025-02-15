@@ -24,6 +24,12 @@ fi
 sleep 1
 echo "======================================="
 echo
+
+if [ -z $runPackage ]; then 
+   echo "Package not Detected"
+   exit 1
+fi
+
 echo " [Remove Game: ${runPackage}]"
 sleep 0.5
 echo
