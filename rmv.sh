@@ -34,7 +34,7 @@ if [ ! -f "$log_file" ]; then
     echo "          ================================"
     echo
     sleep 1
-    rm $log_file
+    rm "$log_file"
 fi
 
 echo "=============================="
