@@ -24,38 +24,4 @@ fi
 sleep 1
 echo "======================================="
 echo
-
-if [ -z $runPackage ]; then 
-   echo "Package not Detected"
-   exit 1
-fi
-
-echo " [Remove Game: ${runPackage}]"
-sleep 0.5
-echo
-
-if [ ! -f "$log_file" ]; then
-    echo "          ================================"
-    echo "             [Disabling System Modules]"
-    echo "          ================================"
-    echo
-    sleep 1
-    rm "$log_file"
-fi
-
-echo "=============================="
-if [ -f "$log_file" ]; then
-   echo " Checking Status : [Non Active]"
-else
-   echo " Checking Status : [Failed Disabled]"
-fi
-echo "=============================="
-echo
-
-echo "      ============================"
-echo "        Disable Game Adjustments"
-echo "      ============================"
-echo
-
-echo "| Thank you for using my module |"
-echo "            Enjoy "
+echo " Rmoved Game : ${runPackage}"
