@@ -43,6 +43,10 @@ else
   echo "    Status    : [Non Active]"
 fi
 
+if [ -z $runPackage ]; then 
+    echo "package not detected"
+    exit 1
+fi
 
 sleep 1
 echo "======================================="
