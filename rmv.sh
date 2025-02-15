@@ -6,6 +6,12 @@ $AXFUN
 import axeron.prop
 log_file="/data/local/tmp/install_selesai"
 
+
+if [ -z $runPackage ]; then 
+    echo "package not detected"
+    exit 1
+fi
+
 echo "=======================================" 
 echo "     Welcome To Modules Plugin GVR "
 echo "=======================================" 
@@ -20,10 +26,6 @@ if [ -f "$log_file" ]; then
   echo "    Status    : [Active]"
 else
   echo "    Status    : [Non Active]"
-fi
-if [ -z $runPackage ]; then 
-    echo "package not detected"
-    exit 1
 fi
 sleep 1
 echo "======================================="
