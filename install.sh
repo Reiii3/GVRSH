@@ -87,10 +87,14 @@ fi
    echo "   ->[Reder selection : ${renderer}]"
    sleep 1
  fi
-if [ "${runPackage}" = "com.dts.freefiremax" ]; then
+ if [ "${runPackage}" = "com.dts.freefiremax" ]; then
+   echo "   ->[Optimation FreeFire Max]"
+   sleep 1
+ elif [ "$runPackage" = "com.dts.freefireth" ]; then
    echo "   ->[Optimation FreeFire]"
    sleep 1
-fi
+ fi 
+ 
  echo "   ->[Comming Soon Next Update]"
 sleep 0.5
 
