@@ -89,8 +89,10 @@ fi
  fi
 if [ "${runPackage}" = "com.dts.freefiremax" ]; then
    echo "   ->[Optimation FreeFire]"
-   sleep 0.5
+   sleep 1
 fi
+ echo "   ->[Comming Soon Next Update]"
+sleep 0.5
 
 echo
 echo "==================="
