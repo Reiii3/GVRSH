@@ -24,8 +24,34 @@ fi
 sleep 1
 echo "======================================="
 echo
-echo "Rmoved Game : ${runPackage}"
+echo " [Remove Game: ${runPackage}]"
+sleep 0.5
+echo
 
-rm $log_file
+if [ ! -f "$log_file" ]; then
+     echo "          ================================"
+     echo "             [Disabling System Modules]"
+     echo "          ================================"
+     echo
 
-echo "Removed"
+     sleep 1
+
+     rm $log_file
+fi
+
+echo "=============================="
+if [ -f "$log_file" ]; then
+    echo " Checking Status : [Non Active]"
+else
+    echo " Checking Status : [Failed Disabled]"
+fi
+echo "=============================="
+echo
+
+echo "     ============================"
+echo "      Disable Game Adjustments"
+echo "     ============================"
+echo
+
+echo "| Thank you for using my module |"
+echo "           Enjoy "
