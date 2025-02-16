@@ -29,10 +29,8 @@ sleep 0.5
 echo
 
 if [ -f "$log_file" ]; then
-     echo "      ================================"
-     echo "         [Disabling System Modules]"
-     echo "      ================================"
-     echo
+     echo "      =================================="
+     echo "          [Disabling System Modules]"
 
      sleep 1
 
@@ -40,9 +38,11 @@ if [ -f "$log_file" ]; then
 fi
 
 if [ ! -f "$log_file" ]; then
-     echo "      ->Checking Status : [Non Active]"
+     echo "       ->Checking Status : [Non Active]"
+     echo "      =================================="
 else
      echo "      ->Checking Status : [Failed Disabled]"
+     echo "      =================================="
 fi
 echo
 
