@@ -57,6 +57,7 @@ echo
 if [ ! -f "$log_file" ]; then
     echo "          ================================"
     echo "            [Instalation System Modules]"
+    echo "              Update Status : [Active]"
     echo "          ================================"
     echo
     apply
