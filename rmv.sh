@@ -40,7 +40,7 @@ if [ -f "$log_file" ]; then
 fi
 
 echo "================================"
-if [ -f "$log_file" ]; then
+if [ ! -f "$log_file" ]; then
     echo " Checking Status : [Non Active]"
 else
     echo " Checking Status : [Failed Disabled]"
