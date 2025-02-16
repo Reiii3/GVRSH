@@ -28,7 +28,7 @@ echo " [Remove Game: ${runPackage}]"
 sleep 0.5
 echo
 
-if [ ! -f "$log_file" ]; then
+if [ -f "$log_file" ]; then
      echo "      ================================"
      echo "       [Disabling System Modules]"
      echo "      ================================"
