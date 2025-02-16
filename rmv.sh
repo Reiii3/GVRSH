@@ -29,9 +29,9 @@ sleep 0.5
 echo
 
 if [ ! -f "$log_file" ]; then
-     echo "          ================================"
-     echo "             [Disabling System Modules]"
-     echo "          ================================"
+     echo "      ================================"
+     echo "       [Disabling System Modules]"
+     echo "      ================================"
      echo
 
      sleep 1
@@ -39,19 +39,19 @@ if [ ! -f "$log_file" ]; then
      rm $log_file
 fi
 
-echo "=============================="
+echo "================================"
 if [ -f "$log_file" ]; then
     echo " Checking Status : [Non Active]"
 else
     echo " Checking Status : [Failed Disabled]"
 fi
-echo "=============================="
+echo "================================"
 echo
 
 echo "     ============================"
-echo "      Disable Game Adjustments"
+echo "       Disable Game Adjustments"
 echo "     ============================"
 echo
 
 echo "| Thank you for using my module |"
-echo "           Enjoy "
+echo "             Enjoy "
