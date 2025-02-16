@@ -41,7 +41,7 @@ if [ ! -f "$log_file" ]; then
      echo "         Update Status : [Non Active]"
      echo "      =================================="
 else
-     echo "      ->Update Status : [Failed Disabled]"
+     echo "      Update Status : [Failed Disabled]"
      echo "      =================================="
 fi
 echo
