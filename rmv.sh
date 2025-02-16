@@ -46,9 +46,9 @@ else
 fi
 echo
 
-echo "     ============================"
-echo "       Disable Game Adjustments"
-echo "     ============================"
+echo " ============================"
+echo "   Disable Game Adjustments"
+echo " ============================"
 echo
 
 echo "| Thank you for using my module |"
