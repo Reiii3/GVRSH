@@ -45,15 +45,21 @@ else
      echo "      =================================="
 fi
 echo
+sleep 1
 
 echo " ============================"
 echo "   Disable Game Adjustments"
 echo " ============================"
+sleep 1
 echo
 echo " ->[Removed System Driver]"
+sleep 0.5
 echo " ->[Removed Compile System]"
+sleep 0.5
 echo " ->[Render Default System]"
+sleep 0.5
 echo " ->[Removed All Fetures]"
+sleep 1
 
 echo "| Thank you for using my module |"
 echo "             Enjoy "
