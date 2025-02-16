@@ -60,6 +60,7 @@ echo " ->[Render Default System]"
 sleep 0.5
 echo " ->[Removed All Fetures]"
 sleep 1
+echo
 
 echo "| Thank you for using my module |"
 echo "             Enjoy "
