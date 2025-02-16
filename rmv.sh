@@ -30,7 +30,7 @@ echo
 
 if [ -f "$log_file" ]; then
      echo "      ================================"
-     echo "       [Disabling System Modules]"
+     echo "         [Disabling System Modules]"
      echo "      ================================"
      echo
 
@@ -39,13 +39,11 @@ if [ -f "$log_file" ]; then
      rm $log_file
 fi
 
-echo "================================"
 if [ ! -f "$log_file" ]; then
-    echo " Checking Status : [Non Active]"
+     echo "         ->Checking Status : [Non Active]"
 else
-    echo " Checking Status : [Failed Disabled]"
+     echo "         ->Checking Status : [Failed Disabled]"
 fi
-echo "================================"
 echo
 
 echo "     ============================"
