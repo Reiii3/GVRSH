@@ -50,6 +50,9 @@ echo " ============================"
 echo "   Disable Game Adjustments"
 echo " ============================"
 echo
+echo " ->[Removed System Driver]"
+echo " ->[Rmoved Compile System]"
+
 
 echo "| Thank you for using my module |"
 echo "             Enjoy "
