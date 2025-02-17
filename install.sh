@@ -89,10 +89,11 @@ fi
  fi
  if [ "${runPackage}" = "com.dts.freefiremax" ]; then
    echo "   ->[Optimation FreeFire Max]"
-   device_config put game_overlay ${runPackage} mode=2,vulkan=1,downscaleFactor=0.7,fps=60:mode=3,vulkan=0,downscaleFactor=0.9,fps=60
+   device_config put game_overlay ${runPackage} mode=2,${renderer}=1,downscaleFactor=0.7,fps=60:mode=3,vulkan=0,downscaleFactor=0.9,fps=60
    sleep 1
  elif [ "$runPackage" = "com.dts.freefireth" ]; then
    echo "   ->[Optimation FreeFire]"
+   device_config put game_overlay ${runPackage} mode=2,${renderer}=1,downscaleFactor=0.7,fps=60:mode=3,vulkan=0,downscaleFactor=0.9,fps=60
    sleep 1
  fi 
  
