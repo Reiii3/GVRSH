@@ -9,6 +9,7 @@ gvr="$pkg2"
 log_folder="/data/local/tmp/axeron_cash/zcek_ins"
 log_sys="$log_folder/install_selesai"
 dvc_ins="$log_folder/dvc"
+
 if [ -n "$1" ] && [ "$1" == "-g" ];then
     axprop $path_axeronprop nameGame -s "$2"
     nameGame="$2"
