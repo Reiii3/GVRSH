@@ -29,12 +29,11 @@ echo " [Remove Game: ${nameGame}]"
 sleep 0.5
 echo
 
-if [ -f "$loo_folder" ]; then
+if [ -f "$log_folder" ]; then
      echo "      =================================="
      echo "          [Disabling System Modules]"
-
+     echo "      =================================="
      sleep 1
-
      rm -rf $log_folder
 fi
 
