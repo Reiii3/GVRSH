@@ -11,8 +11,8 @@ log_sys="$log_folder/install_selesai"
 new_v=""
 new_vc=""
 update="none"
-
-if [ "$version" != "$new_v" ]; then
+updt=""
+if [ -z $updt ]; then
     axprop $path_axeronprop version -s "$new_v"
     axprop $path_axeronprop versionCode -s "$new_vc"
     version="$new_v"
