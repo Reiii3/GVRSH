@@ -8,7 +8,7 @@ pkg2=$(pm list packages | grep -i "gvortex" | sed 's/package://g')
 gvr="$pkg2"
 log_folder="/data/local/tmp/axeron_cash/zcek_ins"
 log_sys="$log_folder/install_selesai"
-
+dvc_ins="$log_folder/dvc"
 if [ -n "$1" ] && [ "$1" == "-g" ];then
     axprop $path_axeronprop nameGame -s "$2"
     nameGame="$2"
@@ -61,14 +61,16 @@ else
    echo "[Not Detected]"
 fi
 
-if [ -z $runPackage ]; then 
-     echo "package not detected"
-    exit 1
-fi
+
 
 sleep 1
 echo "======================================="
 echo
+
+if [ -z $runPackage ]; then 
+     echo "package not detected"
+    exit 1
+fi
 
 if [ ! -f "$log_folder" ]; then
     mkdir -p "$log_folder" # Membuat folder untul menyimpan file penanda
@@ -86,6 +88,7 @@ if [ ! -f "$log_sys" ]; then
     echo -n "              Update Status : "
     sleep 0.5
     echo "[Active]"
+    sleep 0.5
     echo "          ================================"
     echo
     apply
@@ -119,12 +122,18 @@ fi
  fi
  if [ "${runPackage}" = "com.dts.freefiremax" ]; then
    echo "   [$nameGame]->[Optimation FreeFire Max]"
-   device_config put game_overlay ${runPackage} mode=2,${renderer}=1,downscaleFactor=0.7,fps=60:mode=3,vulkan=0,downscaleFactor=0.9,fps=60
-   sleep 1
+     if [ ! -f "$dvc_ins"]; then
+      device_config put game_overlay ${runPackage} mode=2,${renderer}=1,downscaleFactor=0.7,fps=60:mode=3,vulkan=0,downscaleFactor=0.9,fps=60
+      sleep 1
+      echo "" > "$dvc_ins" # Membuat file Penanda Bahwa Downscale Telah dilakukan
+     fi
  elif [ "$runPackage" = "com.dts.freefireth" ]; then
    echo "   [$nameGame]->[Optimation FreeFire]"
-   device_config put game_overlay ${runPackage} mode=2,${renderer}=1,downscaleFactor=0.7,fps=60:mode=3,vulkan=0,downscaleFactor=0.9,fps=60
-   sleep 1
+     if [ ! -f "$dvc_ins"]; then
+      device_config put game_overlay ${runPackage} mode=2,${renderer}=1,downscaleFactor=0.7,fps=60:mode=3,vulkan=0,downscaleFactor=0.9,fps=60
+      sleep 1
+      echo "" > "$dvc_ins" # Membuat file Penanda Bahwa Downscale Telah dilakukan
+     fi
  fi 
  
  echo "   [$nameGame]->[Comming Soon Next Update]"
@@ -138,4 +147,4 @@ echo "| Enjoy This Game |"
 sleep 1 
 echo 
 
-toast  "Open GVR | Enjoy"
+toast  "Open GVR | ${nameGame}"
