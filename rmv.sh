@@ -5,7 +5,7 @@ fi
 $AXFUN
 import axeron.prop
 log_folder="/data/local/tmp/axeron_cash/zcek_ins"
-log_file="/data/local/tmp/install_selesai"
+log_file="$log_folder/install_selesai"
 
 echo "=======================================" 
 echo "     Welcome To Modules Plugin GVR "
