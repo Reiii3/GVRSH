@@ -53,13 +53,13 @@ echo "   Disable Game Adjustments"
 echo " ============================"
 sleep 1
 echo
-echo " ->[Removed System Driver]"
+echo " [$nameGame]->[Removed System Driver]"
 sleep 0.5
-echo " ->[Removed Compile System]"
+echo " [$nameGame]->[Removed Compile System]"
 sleep 0.5
-echo " ->[Render Default System]"
+echo " [$nameGame]->[Render Default System]"
 sleep 0.5
-echo " ->[Removed All Fetures]"
+echo " [$nameGame]->[Removed All Fetures]"
 sleep 1
 echo
 
