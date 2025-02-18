@@ -106,7 +106,9 @@ fi
    echo "   ->[Reder selection : none]"
    sleep 1
  else
-   echo "   ->[Reder selection : ${renderer}]"
+   echo -n "   ->[Reder selection : "
+   sleep 0.5
+   echo "${renderer}]"
    sleep 1
  fi
  if [ "${runPackage}" = "com.dts.freefiremax" ]; then
