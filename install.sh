@@ -41,7 +41,7 @@ echo "    Version   : ${version} | ${versionCode}"
 sleep 0.5
 echo "    Update    : ${update}"
 sleep 0.5
-if [ -f "$log_file" ]; then
+if [ -f "$log_sys" ]; then
   echo -n "    Status    : "
   sleep 0.5
   echo "[Active]"
