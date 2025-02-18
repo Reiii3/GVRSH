@@ -4,15 +4,19 @@ fi
 
 $AXFUN
 import axeron.prop
-runPackage1="com.rezone.gvortex"
-log_file="/data/local/tmp/install_selesai"
+pkg2=$(pm list packages | grep -i "gvortex" | sed 's/package://g')
+gvr="$pkg2"
+log_folder="/data/local/tmp/axeron_cash/zcek_ins"
+log_sys="$log_folder/install_selesai"
 
-
-if [ -n "$1" ] && [ "$1" == "-p" ];then
-    axprop $path_axeronprop runPackage -s "$2"
-    runPackage="$2"
+if [ -n "$1" ] && [ "$1" == "-g" ];then
+    axprop $path_axeronprop nameGame -s "$2"
+    nameGame="$2"
     shift 2
+    pkg=$(pm list packages | grep -i "$nameGame" | sed 's/package://g')
+    runPackage="$pkg"
 fi
+
 
 if [ -n "$1" ] && [ "$1" == "-v" ];then
     renderer="$2"
@@ -38,9 +42,13 @@ sleep 0.5
 echo "    Update    : none "
 sleep 0.5
 if [ -f "$log_file" ]; then
-  echo "    Status    : [Active]"
+  echo -n "    Status    : "
+  sleep 0.5
+  echo "[Active]"
 else
-  echo "    Status    : [Non Active]"
+  echo -n "    Status    : "
+  sleep 0.5
+  echo "[Non Active]"
 fi
 
 if [ -z $runPackage ]; then 
@@ -51,18 +59,22 @@ fi
 sleep 1
 echo "======================================="
 echo
-echo " [Running Game : ${runPackage}]"
+echo -n " [Running Game : "
+sleep 0.5
+echo "${nameGame}]"
 sleep 0.5
 echo
-if [ ! -f "$log_file" ]; then
+if [ ! -f "$log_sys" ]; then
     echo "          ================================"
     echo "            [Instalation System Modules]"
-    echo "              Update Status : [Active]"
+    echo -n "              Update Status : "
+    sleep 1
+    echo "[Active]"
     echo "          ================================"
     echo
     apply
     sleep 1
-    echo "" > "$log_file" # Membuat file sebagai penanda bahwa instalasi sudah dilakukan
+    echo "" > "$log_sys" # Membuat file sebagai penanda bahwa instalasi sudah dilakukan
 else
     echo "          ================================"
     echo "            [System Modules Sudah Aktif]"      
@@ -109,4 +121,3 @@ sleep 1
 echo 
 
 toast  "Open GVR | Enjoy"
-flaunch $runPackage1
