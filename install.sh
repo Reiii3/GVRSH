@@ -69,6 +69,12 @@ fi
 sleep 1
 echo "======================================="
 echo
+
+if [ ! -f "$log_folder" ]; then
+    mkdir -p "$log_folder" # Membuat folder untul menyimpan file penanda
+    sleep 1
+fi 
+
 echo -n " [Running Game : "
 sleep 0.5
 echo "${nameGame}]"
