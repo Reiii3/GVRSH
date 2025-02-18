@@ -18,7 +18,6 @@ if [ -n "$1" ] && [ "$1" == "-g" ];then
     runPackage="$pkg"
 fi
 
-
 if [ -n "$1" ] && [ "$1" == "-v" ];then
     renderer="$2"
     shift 
