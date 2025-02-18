@@ -52,11 +52,11 @@ else
 fi
 
 if [ "$gvr" = "com.rezone.gvortex" ]; then 
-   echo -n "    GVR      : "
+   echo -n "    GVR       : "
    sleep 0.5
    echo "[Detected]"
 else 
-   echo -n "    GVR      : "
+   echo -n "    GVR       : "
    sleep 0.5
    echo "[Not Detected]"
 fi
