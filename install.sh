@@ -104,30 +104,30 @@ fi
  echo "   ============================="
  sleep 0.5
  echo
- echo "   ->[Aktivasi System Driver Game]"
+ echo "   [$nameGame]->[Aktivasi System Driver Game]"
  sleep 1
- echo "   ->[Aktivasi System compile]"
+ echo "   [$nameGame]->[Aktivasi System compile]"
  sleep 1
  if [ -z $renderer ]; then
-   echo "   ->[Reder selection : none]"
+   echo "   [$nameGame]->[Reder selection : none]"
    sleep 1
  else
-   echo -n "   ->[Reder selection : "
+   echo -n "   [$nameGame]->[Reder selection : "
    sleep 0.5
    echo "${renderer}]"
    sleep 1
  fi
  if [ "${runPackage}" = "com.dts.freefiremax" ]; then
-   echo "   ->[Optimation FreeFire Max]"
+   echo "   [$nameGame]->[Optimation FreeFire Max]"
    device_config put game_overlay ${runPackage} mode=2,${renderer}=1,downscaleFactor=0.7,fps=60:mode=3,vulkan=0,downscaleFactor=0.9,fps=60
    sleep 1
  elif [ "$runPackage" = "com.dts.freefireth" ]; then
-   echo "   ->[Optimation FreeFire]"
+   echo "   [$nameGame]->[Optimation FreeFire]"
    device_config put game_overlay ${runPackage} mode=2,${renderer}=1,downscaleFactor=0.7,fps=60:mode=3,vulkan=0,downscaleFactor=0.9,fps=60
    sleep 1
  fi 
  
- echo "   ->[Comming Soon Next Update]"
+ echo "   [$nameGame]->[Comming Soon Next Update]"
 sleep 0.5
 
 echo
