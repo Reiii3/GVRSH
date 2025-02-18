@@ -17,7 +17,6 @@ if [ -z $updt ]; then
     axprop $path_axeronprop versionCode -s "$new_vc"
     version="$new_v"
     versionCode="$new_vc"
-    
 fi
 
 if [ -n "$1" ] && [ "$1" == "-g" ];then
