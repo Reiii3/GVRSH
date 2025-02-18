@@ -51,8 +51,18 @@ else
   echo "[Non Active]"
 fi
 
+if [ "$gvr" = "com.rezone.gvortex" ]; then 
+   echo -n "    GVR : "
+   sleep 0.5
+   echo "[Detected]"
+else 
+   echo -n "    GVR : "
+   sleep 0.5
+   echo "[Not Detected]"
+fi
+
 if [ -z $runPackage ]; then 
-    echo "package not detected"
+     echo "package not detected"
     exit 1
 fi
 
