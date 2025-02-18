@@ -4,6 +4,7 @@ fi
 
 $AXFUN
 import axeron.prop
+log_folder="/data/local/tmp/axeron_cash/zcek_ins"
 log_file="/data/local/tmp/install_selesai"
 
 echo "=======================================" 
@@ -24,20 +25,20 @@ fi
 sleep 1
 echo "======================================="
 echo
-echo " [Remove Game: ${runPackage}]"
+echo " [Remove Game: ${nameGame}]"
 sleep 0.5
 echo
 
-if [ -f "$log_file" ]; then
+if [ -f "$loo_folder" ]; then
      echo "      =================================="
      echo "          [Disabling System Modules]"
 
      sleep 1
 
-     rm $log_file
+     rm -rf $log_folder
 fi
 
-if [ ! -f "$log_file" ]; then
+if [ ! -f "$log_folder" ]; then
      echo "         Update Status : [Non Active]"
      echo "      =================================="
 else
