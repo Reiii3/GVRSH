@@ -8,6 +8,17 @@ pkg2=$(pm list packages | grep -i "gvortex" | sed 's/package://g')
 gvr="$pkg2"
 log_folder="/data/local/tmp/axeron_cash/zcek_ins"
 log_sys="$log_folder/install_selesai"
+new_v=""
+new_vc=""
+update="none"
+
+if [ "$version" != "$new_v" ]; then
+    axprop $path_axeronprop version -s "$new_v"
+    axprop $path_axeronprop versionCode -s "$new_vc"
+    version="$new_v"
+    versionCode="$new_vc"
+    
+fi
 
 if [ -n "$1" ] && [ "$1" == "-g" ];then
     axprop $path_axeronprop nameGame -s "$2"
@@ -39,7 +50,7 @@ echo "    Developer : Reii"
 sleep 0.5
 echo "    Version   : ${version} | ${versionCode}"
 sleep 0.5
-echo "    Update    : none "
+echo "    Update    : ${update}"
 sleep 0.5
 if [ -f "$log_file" ]; then
   echo -n "    Status    : "
