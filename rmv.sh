@@ -38,6 +38,7 @@ if [ -f "$log_folder" ]; then
 fi
 
 if [ ! -f "$log_folder" ]; then
+     echo "      =================================="
      echo "         Update Status : [Non Active]"
      echo "      =================================="
 else
