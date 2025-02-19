@@ -102,7 +102,7 @@ if [ ! -f "$log_sys" ]; then
     echo
     apply
     sleep 1
-    fle_ins  # Membuat file sebagai penanda bahwa instalasi sudah dilakukan
+    fle_ins "install_selesai" # Membuat file sebagai penanda bahwa instalasi sudah dilakukan
 else
     echo "          ================================"
     sleep 0.5
