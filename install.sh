@@ -184,7 +184,7 @@ fi
  echo "   [$nameGame]->[Comming Soon Next Update]"
 sleep 0.5
 
-if [ $lax = false ]; then
+if [[ "$lax" == "false" ]]; then
     echo
     echo "==================="
     sleep 0.5
