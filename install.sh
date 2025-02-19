@@ -18,6 +18,11 @@ if [ -n "$1" ] && [ "$1" == "-g" ];then
     runPackage="$pkg"
 fi
 
+if [ -n "$1" ] && [ "$1" == "-lx" ]; then 
+   lax=true
+   shift
+fi 
+
 if [ -n "$1" ] && [ "$1" == "-v" ];then
     renderer="$2"
     shift 
@@ -51,9 +56,38 @@ apply2 () {
  
 }
 
+if [ $lax = false ]; then
+
 echo "=======================================" 
 printer "     Welcome To Modules Plugin GVR "
 echo "=======================================" 
+sleep 0.5
+printer "    Developer : Reii"
+sleep 0.5
+printer "    Version   : ${version} | ${versionCode}"
+sleep 0.5
+printer "    Update    : none"
+sleep 0.5
+if [ -f "$log_sys" ]; then
+  printer "    Status    : [Active]"
+else
+  printer "    Status    : [Non Active]"
+fi
+
+if [ "$gvr" = "com.rezone.gvortex" ]; then 
+   printer "    GVR       : [Detected]"
+else 
+   printer "    GVR       : [Not Detected]"
+fi
+sleep 1
+echo "=======================================" 
+echo
+
+else
+
+echo "===================================" 
+printer "     Welcome To Modules laxeron "
+echo "==================================="
 sleep 0.5
 printer "    Developer : Reii"
 sleep 0.5
@@ -76,8 +110,9 @@ fi
 
 
 sleep 1
-echo "======================================="
+echo "==================================="
 echo
+fi
 
 if [ -z $runPackage ]; then 
      echo "package not detected"
