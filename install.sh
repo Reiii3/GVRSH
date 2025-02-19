@@ -34,6 +34,15 @@ text="$1"
 echo
 }
 
+fle_ins() {
+    folder_path="/data/local/tmp/axeron_cash/zcek_ins"
+    file_name="$1"    # Nama fil
+    
+    # Buat file di dalamnya
+    file_path="$folder_path/$file_name"
+    echo "" > "$file_path"
+}
+
 apply () {
  
 }
@@ -87,10 +96,9 @@ sleep 0.5
 echo
 if [ ! -f "$log_sys" ]; then
     echo "          ================================"
-    echo "            [Instalation System Modules]"
-    echo -n "              Update Status : "
     sleep 0.5
-    echo "[Active]"
+    printer "            [Instalation System Modules]"
+    printer "              Update Status : [Active]"
     sleep 0.5
     echo "          ================================"
     echo
@@ -99,14 +107,18 @@ if [ ! -f "$log_sys" ]; then
     echo "" > "$log_sys" # Membuat file sebagai penanda bahwa instalasi sudah dilakukan
 else
     echo "          ================================"
-    echo "            [System Modules Sudah Aktif]"      
+    sleep 0.5
+    printer "            [System Modules Sudah Aktif]"
+    sleep 0.5
     echo "          ================================"
     sleep 1.5
     echo
 fi
 
  echo "   ============================="
- echo "     [Penyesuaian System Game]"
+ sleep 0.5
+ printer "     [Penyesuaian System Game]"
+ sleep 0.5
  echo "   ============================="
  sleep 0.5
  echo
@@ -120,7 +132,7 @@ fi
  else
    echo -n "   [$nameGame]->[Reder selection : "
    sleep 0.5
-   echo "${renderer}]"
+   printer "${renderer}]"
    sleep 1
  fi
  if [ "${runPackage}" = "com.dts.freefiremax" ]; then
@@ -144,9 +156,12 @@ sleep 0.5
 
 echo
 echo "==================="
-echo "    Open to GVR"
+sleep 0.5
+printer "    Open to GVR"
+sleep 0.5
 echo "==================="
-echo "| Enjoy This Game |"
+sleep 0.5
+printer "| Enjoy This Game |"
 sleep 1 
 echo 
 
