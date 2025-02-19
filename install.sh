@@ -194,6 +194,7 @@ fi
  echo "   [$nameGame]->[Aktivasi System Driver Game]"
  sleep 1
  echo "   [$nameGame]->[Aktivasi System compile]"
+  cmd package compile -m speed --secondary-dex -f ${runPackage} > /dev/null 2>&1
  sleep 1
  if [ -z $renderer ]; then
    echo "   [$nameGame]->[Reder selection : none]"
@@ -203,18 +204,19 @@ fi
    sleep 0.5
    printer "${renderer}]"
    sleep 1
+   setprop debug.hwui.renderer $renderer
  fi
  if [ "${runPackage}" = "com.dts.freefiremax" ]; then
    echo "   [$nameGame]->[Optimation FreeFire Max]"
      if [ ! -f "$dvc_ins"]; then
-      device_config put game_overlay $runPackage mode=2,${renderer}=1,downscaleFactor=0.7,fps=60:mode=3,vulkan=0,downscaleFactor=0.9,fps=60
+      device_config put game_overlay com.dts.freefiremax mode=2,vulkan=1,downscaleFactor=0.7,fps=60:mode=3,vulkan=0,downscaleFactor=0.9,fps=60
       sleep 1
       echo "" > "$dvc_ins" # Membuat file Penanda Bahwa Downscale Telah dilakukan
      fi
  elif [ "$runPackage" = "com.dts.freefireth" ]; then
    echo "   [$nameGame]->[Optimation FreeFire]"
      if [ ! -f "$dvc_ins" ]; then
-      device_config put game_overlay $runPackage mode=2,${renderer}=1,downscaleFactor=0.7,fps=60:mode=3,vulkan=0,downscaleFactor=0.9,fps=60
+      device_config put game_overlay com.dts.freefireth mode=2,vulkan=1,downscaleFactor=0.7,fps=60:mode=3,vulkan=0,downscaleFactor=0.9,fps=60
       sleep 1
       echo "" > "$dvc_ins" # Membuat file Penanda Bahwa Downscale Telah dilakukan
      fi
