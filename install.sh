@@ -89,9 +89,7 @@ if [ ! -f "$log_folder" ]; then
     sleep 1
 fi 
 
-echo -n " [Running Game : "
-sleep 0.5
-echo "${nameGame}]"
+printer " [Running Game : [${nameGame}]"
 sleep 0.5
 echo
 if [ ! -f "$log_sys" ]; then
