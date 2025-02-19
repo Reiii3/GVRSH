@@ -6,6 +6,7 @@ $AXFUN
 import axeron.prop
 pkg2=$(pm list packages | grep -i "gvortex" | sed 's/package://g')
 gvr="$pkg2"
+local core="r17rYI0tYD6Cp9pPOtlQ2c0rYMzuOEctdEmseIcseHlP29kC2QyrYAcvaZ1Ez9DPOyctd9lC21yrN4mt2ycsXnmP29pQJ5qrR=="
 log_folder="/data/local/tmp/axeron_cash/zcek_ins"
 log_sys="$log_folder/install_selesai"
 dvc_ins="$log_folder/dvc"
@@ -195,6 +196,7 @@ if [ $lax = false ]; then
     printer "| Enjoy This Game |"
     sleep 1 
     echo 
+    toast  "Open GVR | ${nameGame}"
 else
     echo
     echo "====================="
@@ -205,5 +207,5 @@ else
     sleep 0.5
     printer "| Enjoy This Game |"
     sleep 1
+    xtorm $core
 fi
-toast  "Open GVR | ${nameGame}"
