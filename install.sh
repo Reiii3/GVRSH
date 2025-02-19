@@ -58,60 +58,57 @@ apply2 () {
 
 if [ $lax = false ]; then
 
-echo "=======================================" 
-printer "     Welcome To Modules Plugin GVR "
-echo "=======================================" 
-sleep 0.5
-printer "    Developer : Reii"
-sleep 0.5
-printer "    Version   : ${version} | ${versionCode}"
-sleep 0.5
-printer "    Update    : none"
-sleep 0.5
-if [ -f "$log_sys" ]; then
-  printer "    Status    : [Active]"
+    echo "=======================================" 
+    printer "     Welcome To Modules Plugin GVR "
+    echo "=======================================" 
+    sleep 0.5
+    printer "    Developer : Reii"
+    sleep 0.5
+    printer "    Version   : ${version} | ${versionCode}"
+    sleep 0.5
+    printer "    Update    : none"
+    sleep 0.5
+    if [ -f "$log_sys" ]; then
+      printer "    Status    : [Active]"
+    else
+      printer "    Status    : [Non Active]"
+    fi
+    
+    if [ "$gvr" = "com.rezone.gvortex" ]; then 
+       printer "    GVR       : [Detected]"
+    else 
+       printer "    GVR       : [Not Detected]"
+    fi
+    sleep 1
+    echo "=======================================" 
+    echo
+
 else
-  printer "    Status    : [Non Active]"
-fi
 
-if [ "$gvr" = "com.rezone.gvortex" ]; then 
-   printer "    GVR       : [Detected]"
-else 
-   printer "    GVR       : [Not Detected]"
-fi
-sleep 1
-echo "=======================================" 
-echo
-
-else
-
-echo "===================================" 
-printer "     Welcome To Modules laxeron "
-echo "==================================="
-sleep 0.5
-printer "    Developer : Reii"
-sleep 0.5
-printer "    Version   : ${version} | ${versionCode}"
-sleep 0.5
-printer "    Update    : none"
-sleep 0.5
-if [ -f "$log_sys" ]; then
-  printer "    Status    : [Active]"
-else
-  printer "    Status    : [Non Active]"
-fi
-
-if [ "$gvr" = "com.rezone.gvortex" ]; then 
-   printer "    GVR       : [Detected]"
-else 
-   printer "    GVR       : [Not Detected]"
-fi
-
-
-
-sleep 1
-echo "==================================="
-echo
+    echo "===================================" 
+    printer "     Welcome To Modules laxeron "
+    echo "==================================="
+    sleep 0.5
+    printer "    Developer : Reii"
+    sleep 0.5
+    printer "    Version   : ${version} | ${versionCode}"
+    sleep 0.5
+    printer "    Update    : none"
+    sleep 0.5
+    if [ -f "$log_sys" ]; then
+      printer "    Status    : [Active]"
+    else
+      printer "    Status    : [Non Active]"
+    fi
+    
+    if [ "$gvr" = "com.rezone.gvortex" ]; then 
+       printer "    GVR       : [Detected]"
+    else 
+       printer "    GVR       : [Not Detected]"
+    fi
+    sleep 1
+    echo "==================================="
+    echo
 fi
 
 if [ -z $runPackage ]; then 
@@ -187,15 +184,26 @@ fi
  echo "   [$nameGame]->[Comming Soon Next Update]"
 sleep 0.5
 
-echo
-echo "==================="
-sleep 0.5
-printer "    Open to GVR"
-sleep 0.5
-echo "==================="
-sleep 0.5
-printer "| Enjoy This Game |"
-sleep 1 
-echo 
-
+if [ $lax = false ]; then
+    echo
+    echo "==================="
+    sleep 0.5
+    printer "    Open to GVR"
+    sleep 0.5
+    echo "==================="
+    sleep 0.5
+    printer "| Enjoy This Game |"
+    sleep 1 
+    echo 
+else
+    echo
+    echo "====================="
+    sleep 0.5
+    printer "   Open to Laxeron"
+    sleep 0.5
+    echo "====================="
+    sleep 0.5
+    printer "| Enjoy This Game |"
+    sleep 1
+fi
 toast  "Open GVR | ${nameGame}"
