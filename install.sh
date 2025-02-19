@@ -6,6 +6,7 @@ $AXFUN
 import axeron.prop
 pkg2=$(pm list packages | grep -i "gvortex" | sed 's/package://g')
 gvr="$pkg2"
+lax=false
 log_folder="/data/local/tmp/axeron_cash/zcek_ins"
 log_sys="$log_folder/install_selesai"
 dvc_ins="$log_folder/dvc"
@@ -56,7 +57,7 @@ apply2 () {
  
 }
 
-if [[ "$lax" == "false" ]]; then
+if [ $lax = false ]; then
 
     echo "=======================================" 
     printer "     Welcome To Modules Plugin GVR "
@@ -184,7 +185,7 @@ fi
  echo "   [$nameGame]->[Comming Soon Next Update]"
 sleep 0.5
 
-if [[ "$lax" == "false" ]]; then
+if [ $lax = false ]; then
     echo
     echo "==================="
     sleep 0.5
