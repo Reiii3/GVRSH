@@ -237,6 +237,8 @@ if [ $lax = false ]; then
     sleep 1 
     echo 
     toast  "Open GVR | ${nameGame}"
+    sleep 1 
+    flaunch $gvr
 else
     echo
     echo "====================="
@@ -249,4 +251,5 @@ else
     printer "      | Enjoy This Game |"
     printer "      |  Open This Game |"
     sleep 1
+    flaunch $runPackage
 fi
