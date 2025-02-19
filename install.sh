@@ -23,6 +23,17 @@ if [ -n "$1" ] && [ "$1" == "-v" ];then
     shift 
 fi
 
+printer() {
+text="$1"
+ i=0
+   while [ $i -lt ${#text} ]; do
+     echo -en "${text:$i:1}"
+ sleep 0.02
+   i=$((i + 1))
+ done
+echo
+}
+
 apply () {
  
 }
@@ -32,33 +43,25 @@ apply2 () {
 }
 
 echo "=======================================" 
-echo "     Welcome To Modules Plugin GVR "
+printer "     Welcome To Modules Plugin GVR "
 echo "=======================================" 
 sleep 0.5
-echo "    Developer : Reii"
+printer "    Developer : Reii"
 sleep 0.5
-echo "    Version   : ${version} | ${versionCode}"
+printer "    Version   : ${version} | ${versionCode}"
 sleep 0.5
-echo "    Update    : ${update}"
+printer "    Update    : none"
 sleep 0.5
 if [ -f "$log_sys" ]; then
-  echo -n "    Status    : "
-  sleep 0.5
-  echo "[Active]"
+  printer "    Status    : [Active]"
 else
-  echo -n "    Status    : "
-  sleep 0.5
-  echo "[Non Active]"
+  printer "    Status    : [Non Active]"
 fi
 
 if [ "$gvr" = "com.rezone.gvortex" ]; then 
-   echo -n "    GVR       : "
-   sleep 0.5
-   echo "[Detected]"
+   printer "    GVR       : [Detected]"
 else 
-   echo -n "    GVR       : "
-   sleep 0.5
-   echo "[Not Detected]"
+   printer "    GVR       : [Not Detected]"
 fi
 
 
