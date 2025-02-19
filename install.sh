@@ -129,7 +129,7 @@ fi
      fi
  elif [ "$runPackage" = "com.dts.freefireth" ]; then
    echo "   [$nameGame]->[Optimation FreeFire]"
-     if [ ! -f "$dvc_ins"]; then
+     if [ ! -f "$dvc_ins" ]; then
       device_config put game_overlay $runPackage mode=2,${renderer}=1,downscaleFactor=0.7,fps=60:mode=3,vulkan=0,downscaleFactor=0.9,fps=60
       sleep 1
       echo "" > "$dvc_ins" # Membuat file Penanda Bahwa Downscale Telah dilakukan
