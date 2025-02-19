@@ -56,7 +56,7 @@ apply2 () {
  
 }
 
-if [ $lax = false ]; then
+if [[ "$lax" == "false" ]]; then
 
     echo "=======================================" 
     printer "     Welcome To Modules Plugin GVR "
