@@ -167,6 +167,7 @@ if [ ! -f "$log_sys" ]; then
     echo "          ================================"
     sleep 0.5
     printer "            [Instalation System Modules]"
+    sleep 1
     printer "              Update Status : [Active]"
     printer "            [System Modules Sudah Aktif]"
     sleep 0.5
