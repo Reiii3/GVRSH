@@ -208,5 +208,4 @@ else
     printer "      | Enjoy This Game |"
     printer "      |  Open This Game |"
     sleep 1
-    flaunch $runPackage
 fi
