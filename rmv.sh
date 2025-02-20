@@ -37,7 +37,7 @@ if [ -d "$log_folder" ]; then
      rm -rf $log_folder
 fi
 
-if [ ! -f "$log_folder" ]; then
+if [ ! -d "$log_folder" ]; then
      echo "      =================================="
      echo "         Update Status : [Non Active]"
      echo "      =================================="
