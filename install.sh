@@ -43,7 +43,6 @@ echo
 fle_ins() {
     folder_path="/data/local/tmp/axeron_cash/zcek_ins"
     file_name="$1"    # Nama fil
-    
     # Buat file di dalamnya
     file_path="$folder_path/$file_name"
     echo "" > "$file_path"
@@ -51,7 +50,6 @@ fle_ins() {
 
 apply () {
  # Kode Optimasi Performa untuk Helio G35 ke Bawah
-
 setprop debug.sf.hw 1
 setprop debug.egl.hw 1
 setprop debug.egl.sync 0
