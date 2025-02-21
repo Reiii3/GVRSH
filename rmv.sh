@@ -44,7 +44,7 @@ sleep 0.5
 echo "======================================="
 sleep 0.7
 echo
-echo " [Remove Game: ${nameGame}]"
+printer " [Remove Game: ${nameGame}]"
 sleep 0.5
 echo
 
