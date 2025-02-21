@@ -18,6 +18,11 @@ text="$1"
 echo
 }
 
+rs_ac() {
+prop="$1"
+  resetprop -p "$prop"
+}
+
 echo "=======================================" 
 sleep 0.5
 printer "     Welcome To Modules Plugin GVR "
