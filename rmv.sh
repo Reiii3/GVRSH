@@ -18,7 +18,7 @@ text="$1"
 echo
 }
 
-rs_ac() {
+refact() {
 prop="$1"
   resetprop -p "$prop"
 }
