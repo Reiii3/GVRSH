@@ -1,5 +1,3 @@
-#!/bin/bash
-
 printer() {
     text="$1"
     i=0
