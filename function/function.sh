@@ -1,4 +1,4 @@
-waktu=$(date "+%Y-%m-%d %H:%M:%S")
+waktu=$(date "+%m-%d %H:%M")
 
 printer() {
 text="$1"
